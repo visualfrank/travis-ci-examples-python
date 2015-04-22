@@ -3,6 +3,5 @@ python:
   - "3.4"
 install:
   - pip install -q flask
-  - pip install -q -e . --use-mirrors
 script:
   - python app.py test
