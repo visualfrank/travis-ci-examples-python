@@ -1,10 +1,8 @@
 language: python
 python:
   - "3.4"
-  - "pypy"
 # command to install dependencies
 install:
-  - pip install https://github.com/dcramer/pyflakes/tarball/master
   - pip install -q -e . --use-mirrors
  # command to run tests
   script:
