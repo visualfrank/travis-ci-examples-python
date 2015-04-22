@@ -1,12 +1,8 @@
 language: python
 python:
   - "3.4"
-  - "pypy"
-env:
-  - FLASK=0.8
-  - FLASK=0.7.2
 install:
-  - pip install -q Flask==$FLASK --use-mirrors
+  - pip install -q flask
   - pip install -q -e . --use-mirrors
 script:
   - python app.py test
