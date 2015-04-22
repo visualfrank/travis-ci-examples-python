@@ -4,5 +4,5 @@ python:
   - "pypy"
 install:
   - pip install -q -e . --use-mirrors
-  script:
+script:
   - python app.py test
