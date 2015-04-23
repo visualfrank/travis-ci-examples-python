@@ -9,11 +9,11 @@ RUN apt-get update
 
 RUN apt-get install -qyy \
     -o APT::Install-Recommends=false -o APT::Install-Suggests=false \
-    python-virtualenv pypy libffi6 openssl
+    python-pip python-dev build-essential python-virtualenv pypy libffi6
 
 RUN virtualenv -p /usr/bin/pypy /appenv
-RUN . /appenv/bin/activate; pip install pip==6.0.8
-RUN pip install Flask
+RUN . /appenv/bin/activate
+RUN pip install flask
 ADD . /code
 WORKDIR /code
 CMD python app.py
