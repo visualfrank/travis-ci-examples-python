@@ -17,3 +17,5 @@ RUN pip install flask
 ADD . /code
 WORKDIR /code
 CMD python app.py
+# Expose ports
+EXPOSE 5000
