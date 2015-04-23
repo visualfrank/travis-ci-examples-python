@@ -18,4 +18,4 @@ ADD . /code
 WORKDIR /code
 CMD python app.py
 # Expose ports
-EXPOSE 5000
+EXPOSE 8080
