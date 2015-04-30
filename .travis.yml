@@ -2,6 +2,6 @@ language: python
 python:
   - "3.4"
 install:
-  - pip install -q flask
+  - pip install -q flask psycopg2
 script:
   - python app.py test
