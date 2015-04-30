@@ -13,9 +13,11 @@ RUN apt-get install -qyy \
 
 RUN virtualenv -p /usr/bin/pypy /appenv
 RUN . /appenv/bin/activate
-RUN pip install flask
+RUN pip install flask psycopg2
 ADD . /code
 WORKDIR /code
-CMD python app.py
+
 # Expose ports
 EXPOSE 8080
+
+CMD python app.py
